@@ -2,6 +2,10 @@
 
 A simple web-based image generator to create consistent looking thumbs for tableau.
 
+<img src="img/demo.gif">
+
+-------------
+
 <div style="max-width: 800px;">
 <h2>How to use</h2>
 
