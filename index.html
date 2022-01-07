@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1" />
+    <title>Tableau Project image creator</title>
+    <!-- All the Style Sheets START -->
+    <!-- Fonts -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fontawesome/css/all.css"/> 
+    <link rel="stylesheet" href="packages/coloris.min.css"/>
+    
+    <!-- All the Style Sheets END -->
+  </head>
+  <body>
+    <div class = "container">
+        <h2>Image generator for Tableau</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; background-color: #fff;">
+            <div class = "flex_column single_white_card">
+                
+                
+                <div id="project_template_hero_img">
+                    <div id = "project_template_herotext" class="hero_text">Sample Text Here</div>
+                    <div class="icon_position_hero">
+                        <!-- <div id = "project_template_heroicon"> -->
+                        <i id="project_template_heroicon" class="fas fa-camera"></i>
+                        <!-- </div>  -->
+                        <!-- <img id="project_template_heroicon" src="fontawesome/solid/cookie-bite.svg" width='140' height='140'> -->
+                    </div>  
+                    <!-- I might need to update the way the svg is scaling because html2canvas is failing here -->
+
+                </div>
+                <h3> Hero image</h3>
+
+                <button class="button_download" onclick="html2canvas(document.querySelector('#project_template_hero_img')).then(function(canvas) {
+                    // console.log(canvas);
+                    simulateDownloadImageClick(canvas.toDataURL(), `hero_image.png`);
+                  });">Download hero image</button>
+                
+                <p>Use this for the <strong>parent directory</strong>. <br/>The top level one where your teams can quickly identify the projects they want to browse to.</p>
+            </div>
+
+            <div class = "flex_column single_white_card">
+                
+                <div id="project_template_child_img">
+                    <!-- <div id = "project_template_herotext" class="hero_text">Sample Text Here</div> -->
+                    <div class="icon_position_child">
+                        <i id="project_template_childicon" class="fas fa-camera"></i>
+                    </div>
+                    <!-- <div id = "project_template_childicon" class="icon_position_child"></div> -->
+
+                </div>
+                <h3> Child image</h3>
+                
+                <button class="button_download" onclick="html2canvas(document.querySelector('#project_template_child_img')).then(function(canvas) {
+                    // console.log(canvas);
+                    simulateDownloadImageClick(canvas.toDataURL(), `child_image.png`);
+                  });">Download child image</button>
+                <p>Use these child images as backgrounds for <strong>subdirectories</strong> inside your projects parent directory. <br/>This will keep things identifiable without having to create new images for every single situation.</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2 >Create your image here</h2>
+        <div style="display: flex; flex-direction: row; justify-content: space-between;
+        align-items: flex-start; min-width: 100px;">
+            <!-- text content -->
+            <div class="flex_column flex_one" >
+                <h3> Background colour  </h3>
+                <input type="text" placeholder="#7ac8d6" data-coloris onchange="updateBackground(this.value,'project_template_hero_img'); updateBackground(this.value,'project_template_child_img')">
+            </div>
+            <div style="flex: .1" ></div>
+            <div class="flex_column flex_one">
+                <h3> Text on card </h3>
+                <input type="text" placeholder="Sample Text Here" onchange="updateText(this.value,'project_template_herotext')">
+            </div>
+            <div style="flex: .1" ></div>
+            <div class="flex_column flex_one">
+                <h3> Font Awesome icon name </h3>  
+                <input type="text" placeholder="cookie" onchange="updateIcon(this.value,'project_template_heroicon'); updateIcon(this.value,'project_template_childicon')"> 
+                <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free" alt="list of font-awesome names">list of names you can use here</a>
+            </div>
+            
+
+        </div>
+
+        <div class="divider"></div>
+
+        <h2 >About this app</h2>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-around;
+        align-items: flex-start; width: 100%; background-color: #fff; padding: 2em;">
+            
+            <div class = "info_avatar">
+                <a href="https://www.github.com/adamruddgh/"><img src="img/adams_avatar.png" alt="Adam's Avatar" width="120px" style="margin: 1em;"></a>
+            </div>
+            <div class = "info_text">
+                <p>
+                    This is a little project image generator, which can be used for project folder images in products like Tableau etc. 
+                </p>
+
+                <p>
+                    To generate an image, fill in the drop downs below.
+                    <br/>
+                    When you’re ready to save the images, click the <strong>"DOWNLOAD IMAGE"</strong> buttons!
+                </p>
+                <img src="img/demo.gif">
+        </div>
+          
+        </div>
+
+    </div>
+
+    
+
+    
+
+    <!-- <div class="divider"></div> -->
+
+    <!-- <img src="examples/tab_logo_partners_ch.png">
+    <img src="examples/tab_logo_partners_h.png"> -->
+    <!-- All the JS dependencies START -->
+    <script src="packages/coloris.min.js"></script>
+    <script src="packages/updateImage.js"></script>
+    <script src="packages/downloadImage.js"></script>
+    <script src="packages/html2canvas.min.js"></script>
+
+    <script type="text/javascript">
+
+        Coloris({
+          el: '.coloris',
+          swatches: [
+            '#264653',
+            '#2a9d8f',
+            '#e9c46a',
+            '#f4a261',
+            '#e76f51',
+            '#d62828',
+            '#023e8a',
+            '#0077b6',
+            '#0096c7',
+            '#00b4d8',
+            '#48cae4'
+          ]
+        });
+    
+        </script>
+    <!-- All the JS dependencies END -->
+    <p class="footer_text"><a href="https://www.github.com/adamruddgh/">2022 Adam Stormhardt. BSD3 licence</a></p>
+  </body>
+</html>

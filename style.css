@@ -1,0 +1,206 @@
+/* style sheet for the contents of the project template generator */
+
+body {
+    background-color: rgb(234, 234, 234);
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+h2 {
+    color:rgb(115 110 110);
+}
+
+h3 {
+    color:#736e6e;
+}
+
+p {
+    color:#9b9595;
+}
+
+a {
+    /* text-decoration: none; */
+    font-weight: 500;
+    font-size: small;
+    font-style: italic;
+    color: #7ac8d6;
+    padding: .5em;
+}
+
+input {
+    font-family: monospace;
+    font-size: x-large;
+    text-align: center;
+    /* width: 100%; */
+  }
+
+.button_download{
+    background-color: #736e6e;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: white;
+    border: none;
+    padding: 1em 2em;
+}
+
+.button_download:active {
+    background-color: #a4a2a2;
+    /* box-shadow: 0 5px #666; */
+    transform: translateY(4px);
+  }
+
+#project_template_hero_img {
+    background-color: #7ac8d6;  /*rgb(247, 160, 230); */
+    height: 314px;
+    width: 512px;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+#project_template_child_img {
+    background-color: #7ac8d6;  /*rgb(247, 160, 230); */
+    height: 314px;
+    width: 512px;
+    display: flex;
+    justify-content: flex-end;
+    
+    
+}
+
+#project_template_heroicon {
+    opacity: 0.45;
+    font-size: 160px;
+    /* color: rgba(0, 0, 0, .7); */
+    /* background-image: url('fontawesome/solid/cookie-bite.svg'); */
+    background-repeat: no-repeat;
+    
+}
+
+#project_template_childicon {
+    opacity: 0.45;
+    /* color: rgba(0, 0, 0, .7); */
+    font-size: 90px;
+    /* background-image: url('fontawesome/solid/cookie-bite.svg'); */
+    background-repeat: no-repeat;
+    
+}
+
+.icon_position_hero {
+    display: flex;
+    min-width: 180px;
+    background-position-x: center;
+    background-position-y: center;
+    align-items: center;
+    /* width: 50%; */
+    margin: 40px;
+    
+}
+
+.icon_position_child {
+    display: flex;
+    justify-content: flex-end;
+    width: 100px;
+    margin: 40px;
+    background-position-x: center;
+    background-position-y: top;
+}
+
+.hero_text {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    font-size: 48px;
+    letter-spacing: -2px;
+    height: 100%;
+    /* margin: 0 10px 0 40px; */
+    margin-left: 40px;
+
+}
+
+
+
+.divider {
+    height: 50px;
+}
+
+
+/* These are the base theme css themes */
+
+.container{
+    /* 
+        The main container which holds the content 
+    */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* background-color: #ffffff; */
+    max-width: 1200px;
+    justify-content: center;
+    /* width: 90%; */
+    min-width: 60%;
+    padding: 2em;
+
+}
+
+.container_imagesection{
+    /* 
+        The main container which holds the content
+        for the images. hero and child
+    */
+    background-color: #FFFFFF;
+    
+    
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+    max-width: 512px;
+    
+    
+    justify-content: center;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+}
+.single_white_card {
+    margin: 2em 1em;
+}
+
+.flex_one {
+    flex: 1 ;
+    min-height: 150px;
+    background-color: white;
+    
+}
+
+.info_avatar {
+    flex: 1;
+    min-width: 100px;
+    /* filter: hue-rotate( 90deg ); */
+    filter: saturate(0);
+    opacity: .7;
+    transition: 0.5s;
+}
+
+.info_avatar:hover {
+    opacity: 1;
+    filter: saturate(1);
+}
+
+.info_text {
+    flex: 4;
+    
+}
+
+.footer_text{
+    color: grey;
+    font-size: small;
+
+}
