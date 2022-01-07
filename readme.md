@@ -24,18 +24,18 @@ Select the Background Colour by clicking on the first swatch. You can select eit
 </div>
 
 <div style="display: flex; margin: 20px 0; "> 
-
-<div style="margin: 0 20px; flex: 3;">
-<h3>Background Colour</h3>
-<p>
-Select the Text which will be on the image middle swatch "Text on card". Try to keep your labels to 1-3 words if possible.
-</p>
-</div>
 <div><img src="docs/images/tableau_image_generator_text.png"
      alt="Image generator Text"
      style="flex:1; margin-right: 10px;"
      width="200px"
       /></div>
+<div style="margin: 0 20px; flex: 3;">
+<h3>Text for the Project Thumbnail</h3>
+<p>
+Select the Text which will be on the image middle swatch "Text on card". Try to keep your labels to 1-3 words if possible.
+</p>
+</div>
+
 </div>
 
 <div style="display: flex; margin: 20px 0; "> 
