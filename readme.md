@@ -1,6 +1,6 @@
-# Tableau thumbnail image generator
+# Tableau project image generator
 
-A simple web-based image generator to create consistent looking thumbs for tableau.
+A simple web-based image generator to create consistent looking thumbnail images for your tableau projects.
 <h2><a href="https://adamruddgh.github.io/tableau_project_image_creator/" alt="view live website">Try out the live demo here
 
 <img src="img/demo.gif"></a></h2>
