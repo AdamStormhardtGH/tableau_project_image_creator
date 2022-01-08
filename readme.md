@@ -1,8 +1,9 @@
 # Tableau thumbnail image generator
 
 A simple web-based image generator to create consistent looking thumbs for tableau.
+<h2><a href="https://adamruddgh.github.io/tableau_project_image_creator/" alt="view live website">Try out the live demo here
 
-<img src="img/demo.gif">
+<img src="img/demo.gif"></a></h2>
 
 -------------
 
@@ -81,8 +82,19 @@ To embed these images into a tableau project, host the image on an accessible lo
 
 we have a little html5 page which loads a bunch of javascript libraries to allow us to work on the canvass. 
 - User Enters the Text in an editable form area
-- User selects a fontAwesome icon from the dropdown 
+- User selects a fontAwesome icon by typing the name of the fontawesome font found in the <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=arr&m=free">free icons</a>
 - User selects a colour from the swatch / hue shifts existing colours
+- When the user clicks the download button, we're using html2canvass to create a rasterised version of contents in the div, then triggering a download image action.
+
+## Hosting it yourself
+
+This is a really simple page. You can basically just download it to your local machine and open index.html in chrome, firefox etc. I've tested this across a few browsers and it all seems to work without any issues like CORS etc. 
+
+## Known issues
+
+- Font Awesome icons for brands are not supported atm
+- If you have issues, first try turning off your adblocker or any js blockers
+- Edge / IE may cause issues. I haven't really tested this. 
 
 
 ## libraries / ref
